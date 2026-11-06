@@ -1,0 +1,13 @@
+/home/gic-be-mengseang/oslab-work/lab1/task2_files
+maple.txt
+silver.txt
+This is file silver
+This is file maple
+maple.txt
+silver.txt
+silver_copy.txt
+maple_renamed.txt
+silver.txt
+silver_copy.txt
+maple_renamed.txt
+silver.txt
