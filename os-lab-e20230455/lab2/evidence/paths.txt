@@ -1,0 +1,50 @@
+Core 2 - Path Evidence
+
+1. Move budget 2026.txt using a relative path:
+mv -- "incoming/budget 2026.txt" reports/
+
+2. Move audit notes.txt using absolute paths:
+mv -- "/home/gic-be-mengseang/oslab-work/lab2/incoming/audit notes.txt" "/home/gic-be-mengseang/oslab-work/lab2/reports/"
+
+3. Copy both report files to TechCorp/Legal:
+cp -- "reports/budget 2026.txt" "reports/audit notes.txt" "TechCorp/Legal/"
+
+4. Copy the original budget file into the archive:
+cp -- "reports/budget 2026.txt" "TechCorp/Legal/archive/first-original.txt"
+
+5. Read budget 2026.txt from TechCorp/Marketing using a relative path:
+cat "../../reports/budget 2026.txt"
+Result: amount,268
+
+6. Read budget 2026.txt from TechCorp/Marketing using an absolute path:
+cat "/home/gic-be-mengseang/oslab-work/lab2/reports/budget 2026.txt"
+Result: amount,268
+
+Explanation:
+- Relative paths start from the current working directory.
+- Absolute paths specify the full location from the filesystem root.
+- The first move used a relative destination.
+- The second move used absolute source and destination paths.
+- The copy commands used relative paths from the lab2 directory.
+- From Marketing, ../../ moves up two directory levels to lab2, then enters reports.
+
+7. Core 3 - Intentional path error and correction
+
+Error:
+From TechCorp/Marketing, running:
+cat "reports/budget 2026.txt"
+returned:
+cat: 'reports/budget 2026.txt': No such file or directory
+
+Fix:
+cat "../../reports/budget 2026.txt"
+
+Correct result:
+amount,268
+
+Explanation:
+The reports directory is located two levels above Marketing.
+Using ../../ moves up to the lab2 root before entering reports.
+
+Error: cat: 'reports/budget 2026.txt': No such file or directory
+Fix: ../../reports/budget 2026.txt
