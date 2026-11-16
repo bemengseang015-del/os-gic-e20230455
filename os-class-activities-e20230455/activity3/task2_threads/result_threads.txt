@@ -1,0 +1,11 @@
+Expected counter: 400000
+Actual counter: 124051
+Run 1:
+Expected counter: 400000
+Actual counter: 168831
+Run 2:
+Expected counter: 400000
+Actual counter: 131796
+Run 3:
+Expected counter: 400000
+Actual counter: 126034

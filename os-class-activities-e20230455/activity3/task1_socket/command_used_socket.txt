@@ -1,0 +1,20 @@
+ 1046  git -C "$REPO" push origin main
+ 1047  cd ~/oslab-work/lab2
+ 1048  git -C "$HOME/os-gic-e20230455" status --short --branch
+ 1049  git -C "$HOME/os-gic-e20230455" log -1 --oneline
+ 1050  git -C "$HOME/os-gic-e20230455" log --oneline origin/main..main
+ 1051  git -C "$HOME/os-gic-e20230455" show --stat --oneline 49edddd
+ 1052  git -C "$HOME/os-gic-e20230455" push origin main
+ 1053  git -C "$HOME/os-gic-e20230455" status --short --branch
+ 1054  pwd
+ 1055  ls -la
+ 1056  sudo apt-get install mc -y
+ 1057  cd ~/os-gic-e20230455/os-class-activities-e20230455/activity3/task1_socket
+ 1058  ./client
+ 1059  ./server > result_server.txt 2>&1 &
+ 1060  sleep 1
+ 1061  ./client > result_client.txt 2>&1
+ 1062  wait
+ 1063  cat result_server.txt result_client.txt > result_socket.txt
+ 1064  cat result_socket.txt
+ 1065  history | tail -n 20 > command_used_socket.txt

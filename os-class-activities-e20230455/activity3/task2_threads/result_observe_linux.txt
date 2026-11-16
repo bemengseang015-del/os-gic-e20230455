@@ -1,0 +1,25 @@
+===== ps -eLf =====
+gic-be-+ 2353242 2349455 2353242  0    5 14:51 pts/8    00:00:00 ./threads_observe
+gic-be-+ 2353242 2349455 2353244  0    5 14:51 pts/8    00:00:00 ./threads_observe
+gic-be-+ 2353242 2349455 2353246  0    5 14:51 pts/8    00:00:00 ./threads_observe
+gic-be-+ 2353242 2349455 2353247  0    5 14:51 pts/8    00:00:00 ./threads_observe
+gic-be-+ 2353242 2349455 2353248  0    5 14:51 pts/8    00:00:00 ./threads_observe
+===== ps -T =====
+    PID     TID PSR STAT COMMAND
+2353242 2353242   0 Sl   threads_observe
+2353242 2353244   2 Sl   threads_observe
+2353242 2353246   4 Sl   threads_observe
+2353242 2353247   5 Sl   threads_observe
+2353242 2353248   7 Sl   threads_observe
+===== /proc/2353242/task =====
+2353242
+2353244
+2353246
+2353247
+2353248
+===== Thread count =====
+5
+===== Process status =====
+Name:	threads_observe
+State:	S (sleeping)
+Threads:	5

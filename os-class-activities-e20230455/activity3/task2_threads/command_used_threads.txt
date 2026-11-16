@@ -1,0 +1,40 @@
+ 1087  ./threads_mutex > result_threads_mutex.txt 2>&1
+ 1088  cat result_threads_mutex.txt
+ 1089  for i in 1 2 3; do     echo "Run $i:";     ./threads_mutex; done
+ 1090  for i in 1 2 3; do     echo "Run $i:";     ./threads_mutex; done >> result_threads_mutex.txt
+ 1091  cat result_threads_mutex.txt
+ 1092  nano threads_observe.c
+ 1093  cat threads_observe.c
+ 1094  gcc -Wall -Wextra -o threads_observe threads_observe.c -pthread
+ 1095  ls -l
+ 1096  ./threads_observe > observe_output.txt 2>&1 &
+ 1097  PID=$!
+ 1098  echo "Process PID: $PID"
+ 1099  sleep 2
+ 1100  cat observe_output.txt
+ 1101  ps -T -p "$PID" -o pid,tid,psr,stat,comm
+ 1102  ps -eLf | grep threads_observe > result_observe_linux.txt
+ 1103  ps -T -p "$PID" -o pid,tid,psr,stat,comm >> result_observe_linux.txt
+ 1104  echo "--- /proc/$PID/task/ ---" >> result_observe_linux.txt
+ 1105  ls "/proc/$PID/task/" >> result_observe_linux.txt
+ 1106  echo "--- Thread count ---" >> result_observe_linux.txt
+ 1107  ls "/proc/$PID/task/" | wc -l | tee -a result_observe_linux.txt
+ 1108  grep -E 'Name|State|Threads' "/proc/$PID/status"
+ 1109  cat result_observe_linux.txt
+ 1110  ./threads_observe > observe_output.txt 2>&1 &
+ 1111  PID=$!
+ 1112  echo "Process PID: $PID"
+ 1113  sleep 1
+ 1114  {     echo "===== ps -eLf =====";     ps -eLf | grep '[t]hreads_observe';      echo "===== ps -T =====";     ps -T -p "$PID" -o pid,tid,psr,stat,comm;      echo "===== /proc/$PID/task =====";     ls "/proc/$PID/task/";      echo "===== Thread count =====";     ls "/proc/$PID/task/" | wc -l;      echo "===== Process status =====";     grep -E 'Name|State|Threads' "/proc/$PID/status"; } | tee result_observe_linux.txt
+ 1115  ./threads_observe > observe_output.txt 2>&1 &
+ 1116  PID=$!
+ 1117  sleep 1
+ 1118  htop -p "$PID"
+ 1119  ps -o pid,ppid,psr,comm -p 2
+ 1120  ps --ppid 2 -o pid,ppid,psr,comm | head -15
+ 1121  ps -eo pid,ppid,nlwp,comm --forest | head -30
+ 1122  pstree -p | head -20
+ 1123  {     echo "===== kthreadd =====";     ps -o pid,ppid,psr,comm -p 2;      echo "===== Kernel threads =====";     ps --ppid 2 -o pid,ppid,psr,comm | head -15;      echo "===== Process tree =====";     ps -eo pid,ppid,nlwp,comm --forest | head -30;      echo "===== pstree =====";     pstree -p | head -20; } | tee result_kernel_threads.txt
+ 1124  cat result_kernel_threads.txt
+ 1125  cd ~/os-gic-e20230455/os-class-activities-e20230455/activity3/task2_threads
+ 1126  history | tail -n 40 > command_used_threads.txt

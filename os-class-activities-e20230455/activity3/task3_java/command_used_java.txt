@@ -1,0 +1,16 @@
+  999  cd ~/os-gic-e20230455
+ 1000  ssh gic-be-mengseang@ssh2.rathpisey.site
+ 1001  cd /Users/bemengseang/Documents/os-gic-e20230455/os-class-activities-e20230455/activity3/task3_java\n\njava -version\njavac -version\npwd\nls -la
+ 1002  find ~/Documents ~/Desktop ~/Downloads -type d -name "activity3" 2>/dev/null
+ 1003  find ~ -type d -name "os-gic-e20230455" 2>/dev/null
+ 1004  ls -la "/Users/bemengseang/Documents/os-gic-e20230455/os-class-activities-e20230455/"\n\nls -la "/Users/bemengseang/Documents/Year4/Operating System/os-gic-e20230455/os-class-activities-e20230455/"
+ 1005  mkdir -p ~/OS-Activity3-Java\ncd ~/OS-Activity3-Java\n\npwd\njava -version\njavac -version
+ 1006  nano ThreadDemo.java
+ 1007  javac ThreadDemo.java\njava ThreadDemo
+ 1008  nano RunnableDemo.java
+ 1009  javac RunnableDemo.java\njava RunnableDemo
+ 1010  nano PoolDemo.java
+ 1011  javac PoolDemo.java\njava PoolDemo
+ 1012  java ThreadDemo > result_thread_demo.txt 2>&1\njava RunnableDemo > result_runnable_demo.txt 2>&1\njava PoolDemo > result_pool_demo.txt 2>&1
+ 1013  echo "===== ThreadDemo ====="\ncat result_thread_demo.txt\n\necho "===== RunnableDemo ====="\ncat result_runnable_demo.txt\n\necho "===== PoolDemo ====="\ncat result_pool_demo.txt
+ 1014  ls -lh

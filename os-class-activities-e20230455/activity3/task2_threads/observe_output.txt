@@ -1,0 +1,10 @@
+Process PID: 2353363
+Worker thread 1 started. TID: 132407246190272
+Worker thread 2 started. TID: 132407237797568
+Worker thread 3 started. TID: 132407229404864
+Worker thread 4 started. TID: 132407221012160
+Worker thread 1 finished.
+Worker thread 2 finished.
+Worker thread 3 finished.
+Worker thread 4 finished.
+All threads finished.
