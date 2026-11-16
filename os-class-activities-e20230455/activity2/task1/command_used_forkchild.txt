@@ -1,0 +1,20 @@
+  411  ls ~/Downloads/task4_*.png
+  412  scp ~/Downloads/task4_system_info.png     ~/Downloads/task4_process_info.png     ~/Downloads/task4_modules.png     gic-be-mengseang@ssh2.rathpisey.site:~/os-gic-e20230455/os-class-activities-e20230455/activity1/screenshots/
+  413  cd ~/os-gic-e20230455
+  414  mkdir -p os-class-activities-e20230455/activity2/{task1,task2,task3_shm,task4_mq,screenshots}
+  415  cd os-class-activities-e20230455/activity2
+  416  pwd
+  417  ls -R
+  418  nano task1/forkchild.c
+  419  cd task1
+  420  gcc -o forkchild forkchild.c
+  421  ./forkchild > result_forkchild.txt 2>&1
+  422  ps -ef --forest | grep -E 'forkchild|PID'
+  423  ./forkchild > result_forkchild.txt 2>&1 &
+  424  ps -ef --forest | grep -E '[f]orkchild'
+  425  cat result_forkchild.txt
+  426  nano forkchild.c
+  427  gcc -o forkchild forkchild.c
+  428  ./forkchild > result_forkchild.txt 2>&1
+  429  cat result_forkchild.txt
+  430  history | tail -n 20 > command_used_forkchild.txt

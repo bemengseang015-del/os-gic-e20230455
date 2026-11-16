@@ -1,0 +1,2 @@
+Consumer: read message: Hello, this is shared memory IPC!
+Consumer: shared memory unlinked.

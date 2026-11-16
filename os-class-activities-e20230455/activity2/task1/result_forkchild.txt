@@ -1,0 +1,9 @@
+Child: PID = 1529172, Parent PID = 1529171
+total 36
+drwxrwxr-x 2 gic-be-mengseang gic-be-mengseang  4096 Nov  5 22:05 .
+drwxrwxr-x 7 gic-be-mengseang gic-be-mengseang  4096 Nov  5 21:50 ..
+-rwxrwxr-x 1 gic-be-mengseang gic-be-mengseang 16480 Nov  5 22:05 forkchild
+-rw-rw-r-- 1 gic-be-mengseang gic-be-mengseang   712 Nov  5 22:04 forkchild.c
+-rw-rw-r-- 1 gic-be-mengseang gic-be-mengseang    43 Nov  5 22:05 result_forkchild.txt
+Parent: Child exited with status 0
+Parent: done.

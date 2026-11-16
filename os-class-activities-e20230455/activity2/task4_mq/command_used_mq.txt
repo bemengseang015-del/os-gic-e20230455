@@ -1,0 +1,20 @@
+  473  cd task4_mq
+  474  pwd
+  475  nano common.h
+  476  cat common.h
+  477  nano sender.c
+  478  cat sender.c
+  479  nano receiver.c
+  480  cat receiver.c
+  481  gcc -o sender sender.c -lrt
+  482  gcc -o receiver receiver.c -lrt
+  483  ls -l
+  484  ./sender
+  485  ./receiver > result-mq-ipc.txt
+  486  cat result-mq-ipc.txt
+  487  history | tail -n 20 > command_used_mq.txt
+  488  ./receiver
+  489  ./sender
+  490  ./receiver > result-mq-ipc.txt
+  491  cat result-mq-ipc.txt
+  492  history | tail -n 20 > command_used_mq.txt

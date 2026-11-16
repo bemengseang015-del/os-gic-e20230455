@@ -1,0 +1,2 @@
+Receiver: received message: Hello from sender! This is message queue IPC.
+Receiver: message queue unlinked.

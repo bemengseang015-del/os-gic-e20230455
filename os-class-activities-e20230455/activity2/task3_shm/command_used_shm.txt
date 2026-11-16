@@ -1,0 +1,20 @@
+  440  nano shm-consumer.c
+  441  ls
+  442  cat shm-consumer.c
+  443  gcc -o shm-producer shm-producer.c -lrt
+  444  gcc -o shm-consumer shm-consumer.c -lrt
+  445  ls -l
+  446  ./shm-producer
+  447  ./shm-consumer > result-shm-ipc.txt
+  448  cat result-shm-ipc.txt
+  449  history | tail -n 20 > command_used_shm.txt
+  450  gic-be-mengseang@i4gic-os:~/os-gic-e20230455/os-class-activities-e20230455/activity2/task3_shm$ ./shm-consumer > result-shm-ipc.txt
+  451  gic-be-mengseang@i4gic-os:~/os-gic-e20230455/os-class-activities-e20230455/activity2/task3_shm$ cat result-shm-ipc.txt
+  452  Consumer: read message: Hello, this is shared memory IPC!
+  453  Consumer: shared memory unlinked.
+  454  gic-be-mengseang@i4gic-os:~/os-gic-e20230455/os-class-activities-e20230455/activity2/task3_shm$ history | tail -n 20 > command_used_shm.txt
+  455  ./shm-consumer
+  456  ./shm-producer
+  457  ./shm-consumer > result-shm-ipc.txt
+  458  cat result-shm-ipc.txt
+  459  history | tail -n 20 > command_used_shm.txt
